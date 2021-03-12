@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,700&display=swap');
+
+html {height: 100vh;}
+
+body {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+    height:100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+header {
+    background-color: rgb(30,30,30);
+    margin: 10px;
+    padding: 40px 20px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+main {
+    margin: 0px 10px 0px 10px;
+    bottom: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10px;
+    flex: 1 1 100%;
+}
+
+footer {
+    /* visibility: hidden; */
+    box-sizing: border-box;
+    display: flex;
+    background-color: rgb(30,30,30);
+    height: 50px;
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding-left: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+footer p {font-size:14px; font-style:italic; color:rgb(120,120,120);}
+footer p:hover {color: hsl(55, 100%, 70%); cursor:default;}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+label {color:rgb(120,120,120);}
+input {
+    height: 40px;
+    padding-left: 20px;
+    border: 3px solid /*white*/ rgb(80,80,80);
+    background-color: rgb(30,30,30);
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+input:focus {outline-style: none; border: 3px solid white;}
+
+.buttonBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#guessInput {flex: 1 1 200px;}
+#guessSubmit {flex: 0 0 50px;}
+
+#guessContainer {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+h1, h2, h3, button {
+    font-family: 'Montserrat', sans-serif;
+    /* letter-spacing: 0.03em; */
+    margin-block: 0;
+    margin-inline: 0;
+    /* margin-top: 5px; */
+}
+
+h1 {
+    font-size: 38px;
+    font-style: italic;
+}
+@media (max-width: 550px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
+/* offset border button 
+button {
+    background-color: white;
+    padding: 10px;
+    border: 5px solid white;
+    box-shadow: 0 0 0 5px black inset;
+} 
+*/
+a {color:white; text-decoration:none;}
+a:hover{color:hsl(55, 100%, 70%);}
+
+button {
+    background-color: rgb(30,30,30);
+    padding: 10px;
+    border: 3px solid rgb(80,80,80);
+    color: rgb(100,100,100);
+    font-size: 16px;
+    flex: 1 1 175px; 
+    min-width: 120px;
+}
+
+button:hover {
+    border-color: hsl(55, 100%, 70%);
+    color: hsl(55, 100%, 70%);
+}
+
+button[disabled] {
+    border: 3px solid rgb(80,80,80);
+    color: rgb(100,100,100);
+}
+
+button:focus {    
+    outline-style: none;
+}
+
+#textBox, #gameBox, #scoreBox {
+    background-color: rgb(30,30,30);
+    padding: 20px;
+}
+
+#textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 30%;
+    min-width: 200px;
+}
+
+#gameBox {
+    visibility: hidden;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#scoreBox {
+    /* visibility: hidden; */
+    flex-grow: 1 1 20%;
+    min-width: 82px;
+}
+
+#indexButton {font-size: 13px;}
+
+ul {
+    list-style-type: square;
+    list-style-position: outside;
+    padding-inline-start: 18px;
+}

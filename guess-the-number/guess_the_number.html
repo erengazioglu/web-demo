@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Guess the Number</title>
+  <script src="guess_the_number.js" defer></script>
+  <link rel="stylesheet" href="guess_the_number.css"></style>
+</head>
+
+<body>
+  <header>
+    <a href="?"><h1>Guess the number.</h1></a>
+    <a id="indexButton" href="">&lt; Back to index</a>
+  </header>
+
+  <main> <!-- arrange div's side by side -->
+    
+    <div id="textBox">
+      <div>
+        <h2>I pick a number, you guess it.</h2>
+        <p>
+          It's that simple. I'll pick a number in a certain range,
+          you will try to guess that number. You can try a number of
+          times before you run out of guesses, after which it is 
+          <em>game over.</em>
+        </p>
+        <p>The rules are as follows:</p>
+        <!-- make the rules changeable -->
+        <ul class="ruleList">
+          <li id="ruleRange">I pick a number ranging from 1 to 100 (inclusive),</li>
+          <li id="ruleGuesses">You have 10 chances to guess correctly.</li>
+          <li id="ruleTips">After every incorrect guess, I'll tell you whether you went too high or too low.</li>
+        </ul>
+        <p>When you're ready, type in your name and start the game!</p>
+      </div>
+
+      <form id="nameForm"> <!-- maybe switch the start button to stop button?-->
+        <label for="nameInput">Your name:</label>
+        <input id="nameInput" type="text">
+        <div class="buttonBox">
+          <button type="button" id="changeRules">Change the rules!</button>
+          <button type="submit" id="nameSubmit">Start the game!</button>
+        </div>
+      </form>
+    </div>
+    
+    <div id="gameBox">
+      <!-- main game elements, appears once game starts -->
+      <h2 id="gameHeader">I've picked a number. Take a guess!</h2>
+      <form id="gameForm">
+        <label for="guessInput">Your guess:</label>
+        <div class="buttonBox">
+          <input id="guessInput" type="text">
+          <button type="submit" id="guessSubmit">Submit!</button>
+        </div>
+      <form>
+      <div id="resultParas">
+        <p id="currentTip"></p>
+        <p id="guessesLeft"></p>
+      </div>
+      <div id="guessContainer">
+        <p>Previous guesses:</p>
+        <p id="previousGuesses"></p>
+      </div>
+    </div>
+
+    <div id="scoreBox">
+      <!-- highscores, dynamically add as it's played -->
+    </div>
+  </main>
+
+  <footer>
+    <p>2021 POMPY Productions.</p>
+  </footer>
+</body>
+
+</html>
